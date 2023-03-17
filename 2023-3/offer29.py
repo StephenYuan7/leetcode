@@ -30,7 +30,3 @@ class Solution:
             left = left + 1
         return r
 
-
-print(Solution().spiralOrder([[1,2,3,4],
-                              [5,6,7,8],
-                              [9,10,11,12]]))
