@@ -1,5 +1,6 @@
 '''
 深度优先遍历
+也可以考虑用栈与队列
 '''
 class Solution:
     def maxAreaOfIsland(self, grid):
