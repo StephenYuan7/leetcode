@@ -20,7 +20,18 @@ class Solution:
             x += 1
         return r
 
+    def trap2(self, height):
+        r = 0
+        left = [0] * len(height)
+        right = [0] * len(height)
+        for i in range(len(height) - 1):
+            left[i + 1] = max(left[i], height[i])
+        for i in range(len(height) - 1, 0, -1):
+            right[i - 1] = max(right[i], height[i])
+        for i in range(len(height)):
+            if height[i] < min(left[i], right[i]):
+                r += min(left[i], right[i]) - height[i]
+        return r
 
 
-
-print(Solution().trap([0,1,0,2,1,0,1,3,2,1,2,1]))
+print(Solution().trap2([4,2,0,3,2,5]))
